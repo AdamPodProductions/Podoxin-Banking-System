@@ -47,12 +47,16 @@ public class Account {
 	
 	public void Deposit(float amount) {
 		balance += amount;
-		System.out.println("Deposited $" + amount + " to account of " + firstName + " " + lastName + ".");
+		
+		String amountString = String.format("%.2f", amount);
+		System.out.printf("Deposited $" + amountString + " to account of " + firstName + " " + lastName + ".");
 	}
 	
 	public void Withdraw(float amount) {
 		if(amount >= balance) {
 			balance -= amount;
+
+			String amountString = String.format("%.2f", amount);
 			System.out.println("Withdrew $" + amount + " from account of " + firstName + " " + lastName + ".");
 		} else {
 			System.out.println("Not enough funds avaliable.");
