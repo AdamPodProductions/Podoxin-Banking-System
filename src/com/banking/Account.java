@@ -49,7 +49,7 @@ public class Account {
 		balance += amount;
 		
 		String amountString = String.format("%.2f", amount);
-		System.out.printf("Deposited $" + amountString + " to account of " + firstName + " " + lastName + ".");
+		System.out.println("Deposited $" + amountString + " to account of " + firstName + " " + lastName + ".");
 	}
 	
 	public void Withdraw(float amount) {
