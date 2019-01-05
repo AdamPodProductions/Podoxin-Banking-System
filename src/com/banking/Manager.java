@@ -28,4 +28,15 @@ public class Manager {
 
 		Scan();
 	}
+	
+	public Account FindAccountByName(String firstName, String lastName) {
+		for(Account account : accounts) 
+		{
+			if(account.GetFirstName().equals(firstName) && account.GetLastName().equals(lastName)) {
+				return account;
+			}
+		}
+		
+		return null;
+	}
 }
