@@ -53,13 +53,13 @@ public class Account {
 	}
 	
 	public void Withdraw(float amount) {
-		if(amount >= balance) {
+		if(amount <= balance) {
 			balance -= amount;
 
 			String amountString = String.format("%.2f", amount);
-			System.out.println("Withdrew $" + amount + " from account of " + firstName + " " + lastName + ".");
+			System.out.println("Withdrew $" + amountString + " from account of " + firstName + " " + lastName + ".");
 		} else {
-			System.out.println("Not enough funds avaliable.");
+			System.out.println("Insufficient funds avaliable.");
 		}
 	}
 }

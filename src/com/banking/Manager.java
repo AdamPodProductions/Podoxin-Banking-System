@@ -24,10 +24,10 @@ public class Manager {
 			} catch (Exception e) {
 				System.out.println("Account could not be created. Please try again.");
 			}
-		} else if(inputs[0].equals("balance")) {
+		} else if (inputs[0].equals("balance")) {
 			try {
 				System.out.println("The balance of account " + inputs[1] + " " + inputs[2] + " is $" + FindAccountByName(inputs[1], inputs[2]).GetBalance());
-			} catch(Exception e) {
+			} catch (Exception e) {
 				System.out.println("Account does not exist.");
 			}
 		} else if (inputs[0].equals("deposit")) {
@@ -37,6 +37,9 @@ public class Manager {
 			} catch (Exception e) {
 				System.out.println("Deposit failed. Please try again.");
 			}
+		} else if (inputs[0].equals("withdraw")) {
+			float amount = Float.parseFloat(inputs[1]);
+			FindAccountByName(inputs[2], inputs[3]).Withdraw(amount);
 		}
 
 		Scan();
