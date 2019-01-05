@@ -62,7 +62,6 @@ public class Account {
 			return true;
 		} else {
 			System.out.println("Insufficient funds avaliable.");
-			
 			return false;
 		}
 	}

@@ -40,7 +40,12 @@ public class Manager {
 		} else if (inputs[0].equals("withdraw")) {
 			float amount = Float.parseFloat(inputs[1]);
 			FindAccountByName(inputs[2], inputs[3]).Withdraw(amount);
-		}
+		} else if (inputs[0].equals("transfer")) {
+			float amount = Float.parseFloat(inputs[1]);
+			if(FindAccountByName(inputs[2], inputs[3]).Withdraw(amount)) {
+				FindAccountByName(inputs[4], inputs[5]).Deposit(amount);
+			}
+		} 
 
 		Scan();
 	}
