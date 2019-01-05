@@ -19,7 +19,7 @@ public class Manager {
 
 		if (inputs[0].equals("create")) {
 			try {
-				accounts.add(new Account(inputs[1], inputs[2], inputs[3]));
+				accounts.add(new Account(inputs[1], inputs[2]));
 				System.out.println("Created account " + inputs[1] + " " + inputs[2] + ".");
 			} catch (Exception e) {
 				System.out.println("Account could not be created. Please try again.");

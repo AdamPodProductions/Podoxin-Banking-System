@@ -3,7 +3,6 @@ package com.banking;
 public class Account {
 	private String firstName = "";
 	private String lastName = "";
-	private String password = "";
 	
 	private float balance = 0.0f;
 	
@@ -11,10 +10,9 @@ public class Account {
 		
 	}
 	
-	public Account(String firstName, String lastName, String password) {
+	public Account(String firstName, String lastName) {
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.password = password;
 	}
 	
 	public String GetFirstName() {
@@ -31,14 +29,6 @@ public class Account {
 	
 	public void SetLastName(String lastName) {
 		this.lastName = lastName;
-	}
-	
-	public String GetPassword() {
-		return password;
-	}
-	
-	public void SetPassword(String password) {
-		this.password = password;
 	}
 	
 	public float GetBalance() {
