@@ -52,14 +52,18 @@ public class Account {
 		System.out.println("Deposited $" + amountString + " to account of " + firstName + " " + lastName + ".");
 	}
 	
-	public void Withdraw(float amount) {
+	public boolean Withdraw(float amount) {
 		if(amount <= balance) {
 			balance -= amount;
 
 			String amountString = String.format("%.2f", amount);
 			System.out.println("Withdrew $" + amountString + " from account of " + firstName + " " + lastName + ".");
+			
+			return true;
 		} else {
 			System.out.println("Insufficient funds avaliable.");
+			
+			return false;
 		}
 	}
 }
