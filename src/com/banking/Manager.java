@@ -47,6 +47,7 @@ public class Manager {
 			}
 		} 
 
+		scanner.close();
 		Scan();
 	}
 
