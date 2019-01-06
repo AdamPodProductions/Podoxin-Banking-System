@@ -30,8 +30,9 @@ public class Manager {
 				}
 			} else if (inputs[0].equals("balance")) {
 				try {
+					String amount = String.format("%.2f", FindAccountByName(inputs[1], inputs[2]).GetBalance());
 					System.out.println("The balance of account " + inputs[1] + " " + inputs[2] + " is $"
-							+ FindAccountByName(inputs[1], inputs[2]).GetBalance());
+							+ amount);
 				} catch (Exception e) {
 					System.out.println("Account does not exist.");
 				}
